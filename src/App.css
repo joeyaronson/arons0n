@@ -4,8 +4,12 @@
 
     /* font-size: calc(50px + 2vmin); */
     color: #063970;
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 100;
+    /* font-family: "Archivo Black", sans-serif;
+     */
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     font-style: normal;
 }
 .page {
@@ -25,33 +29,99 @@
     width: 100%;
 }
 .name {
-    font-size: 11.2cqw;
+    font-size: 16cqw;
     margin-block-start: 0px;
     margin-block-end: 0px;
+    font-weight: 400;
+    transition: all 0.2s;
+    line-height: 1em;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.name:hover {
+    font-weight: 700;
 }
 .description {
     font-size: 3cqw;
+    font-weight: 300;
+}
+
+.sketch {
+    z-index: -1;
+    position: fixed;
+}
+.resumeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+iframe {
+    display: block; /* iframes are inline by default */
+    border: none; /* Reset default border */
+    height: auto; /* Viewport-relative units */
+    aspect-ratio: 8.5/11;
+    width: 80vw;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    /* background-color: red; */
+    height: 50px;
+    padding: 20px;
+    backdrop-filter: blur(3px);
+}
+
+.footerContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.9cqw;
+    width: 90%;
+}
+
+i {
+    margin-right: 3px;
+    margin-left: 10px;
+}
+
+.footerText {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    font-weight: 400;
+}
+
+.footerText:hover {
+    transform: scale(1.05);
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 600px) {
     .name {
-        font-size: 18cqw;
+        font-size: 26cqw;
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
     .description {
         font-size: 5cqw;
     }
-}
-.container {
-    /* position: absolute;
-    left: 0%;
-    top: 0%;
-    transform: translate(-0%, 0%);
-    width: 100vw;
-    height: 50vh; */
-}
-.sketch {
-    z-index: -1;
-    position: fixed;
+
+    footer {
+        height: 100px;
+    }
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 3.5cqw;
+    }
 }

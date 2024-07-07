@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css";
 import AnimateHeight from "react-animate-height";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
     const [navOpen, setNavOpen] = useState(false);
@@ -31,13 +32,13 @@ export default function NavBar() {
                     <div className="listContainer">
                         <ul>
                             <li>
-                                <a href="">home</a>
+                                <Link to="/">home</Link>
                             </li>
                             <li>
                                 <a href="">projects</a>
                             </li>
                             <li>
-                                <a href="">home</a>
+                                <Link to="/resume">resume</Link>
                             </li>
                             <li>
                                 <a href="">home</a>

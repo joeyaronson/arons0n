@@ -1,7 +1,3 @@
-.listContainer {
-    /* text-align: center; */
-    /* container-type: inline-size; */
-}
 ul {
     list-style-type: none;
     width: auto;
@@ -12,8 +8,9 @@ li {
     font-size: 5cqw;
     margin-block-start: 0px;
     margin-block-end: 0px;
-
+    cursor: pointer;
     transition: all 0.2s;
+    font-weight: 300;
 }
 a {
     color: #063970;
@@ -21,11 +18,15 @@ a {
 }
 li:hover {
     transform: scale(1.05);
+    font-weight: 700;
 }
 .navContainer {
     display: flex;
     height: auto;
     width: 100%;
+    margin-bottom: 20px;
+    z-index: 3;
+    position: relative;
 }
 
 .icon-menu {

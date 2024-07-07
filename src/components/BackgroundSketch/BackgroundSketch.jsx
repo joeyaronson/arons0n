@@ -89,7 +89,7 @@ function BackgroundSketch() {
         }
     };
 
-    const windowResized = (p5) => {
+    const windowResized = () => {
         resizeBool = true;
     };
 
