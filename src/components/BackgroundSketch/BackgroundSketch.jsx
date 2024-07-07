@@ -79,7 +79,6 @@ function BackgroundSketch() {
         displayWaves();
         if (resizeBool) {
             if (timer > 50) {
-                console.log("resizing");
                 p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
                 w = [];
                 loadWaves(p5);
