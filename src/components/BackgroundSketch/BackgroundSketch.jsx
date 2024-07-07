@@ -3,7 +3,8 @@ import Sketch from "react-p5";
 let COUNT = 10;
 let w = [];
 const noiseVal = 0.002;
-
+let timer = 0;
+let resizeBool = false;
 function BackgroundSketch() {
     const setup = (p5, canvasParentRef) => {
         p5.createCanvas(p5.windowWidth, p5.windowHeight).parent(
@@ -42,7 +43,7 @@ function BackgroundSketch() {
                 let ny = this.p5.noise(
                     i * noiseVal,
                     this.y / 100,
-                    this.p5.frameCount * noiseVal + (this.p5.mouseX/1000)
+                    this.p5.frameCount * noiseVal + this.p5.mouseX / 1000
                 );
                 // console.log(ny)
                 let yOff = this.p5.map(ny, 0, 1, 0, this.p5.height / 3);
@@ -76,10 +77,21 @@ function BackgroundSketch() {
         p5.stroke("#dc6a2baa");
         p5.fill("#eeeee4");
         displayWaves();
+        if (resizeBool) {
+            if (timer > 50) {
+                console.log("resizing");
+                p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+                w = [];
+                loadWaves(p5);
+                timer = 0;
+                resizeBool = false;
+            }
+            timer++;
+        }
     };
 
     const windowResized = (p5) => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+        resizeBool = true;
     };
 
     return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
