@@ -33,7 +33,7 @@
     margin-block-start: 0px;
     margin-block-end: 0px;
     font-weight: 400;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
     line-height: 1em;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
@@ -95,7 +95,7 @@ i {
 .footerText {
     display: flex;
     align-items: center;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
     font-weight: 400;
 }
 

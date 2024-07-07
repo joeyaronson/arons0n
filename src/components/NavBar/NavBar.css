@@ -9,8 +9,9 @@ li {
     margin-block-start: 0px;
     margin-block-end: 0px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
     font-weight: 300;
+    line-height: 1em;
 }
 a {
     color: #063970;
@@ -56,26 +57,26 @@ li:hover {
 .bar--1 {
     top: var(--pos-y-bar-one);
     transform: rotate(var(--rotate-bar-one));
-    transition: top 200ms 100ms, transform 100ms;
+    transition: top 200ms 100ms, transform 100ms ease-in-out;
 }
 
 .bar--2 {
     transform: scaleX(var(--scale-bar));
-    transition: transform 150ms 100ms;
+    transition: transform 150ms 100ms ease-in-out;
 }
 
 .bar--3 {
     bottom: var(--pos-y-bar-three);
     transform: rotate(var(--rotate-bar-three));
-    transition: bottom 200ms 100ms, transform 100ms;
+    transition: bottom 200ms 100ms, transform 100ms ease-in-out;
 }
 
 .check-icon:checked + .icon-menu > .bar--1 {
-    transition: top 200ms, transform 200ms 100ms;
+    transition: top 200ms, transform 200ms 100ms ease-in-out;
 }
 
 .check-icon:checked + .icon-menu > .bar--3 {
-    transition: bottom 200ms, transform 200ms 100ms;
+    transition: bottom 200ms, transform 200ms 100ms ease-in-out;
 }
 
 .check-icon:checked + .icon-menu {
@@ -101,5 +102,9 @@ li:hover {
         gap: var(--gap);
         cursor: pointer;
         position: relative;
+    }
+    li {
+        font-size: 10cqw;
+    
     }
 }
