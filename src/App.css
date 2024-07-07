@@ -64,6 +64,8 @@ iframe {
     height: auto; /* Viewport-relative units */
     aspect-ratio: 8.5/11;
     width: 80vw;
+    margin-bottom: 200px;
+    margin-top: 20px;
 }
 
 footer {
