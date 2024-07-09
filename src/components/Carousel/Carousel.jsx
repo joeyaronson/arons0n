@@ -5,7 +5,15 @@ import { Carousel as ResponsiveCarousel } from "react-responsive-carousel";
 export default function Carousel(props) {
     const { imgs } = props;
     return (
-        <ResponsiveCarousel dynamicHeight infiniteLoop autoPlay swipeable>
+        <ResponsiveCarousel
+            dynamicHeight
+            infiniteLoop
+            autoPlay
+            swipeable
+            stopOnHover
+            interval={1200}
+            swipeScrollTolerance={50}
+        >
             {imgs.map(({ img, desc }) => (
                 <React.Fragment key="desc">
                     <img alt={desc} src={img} />
