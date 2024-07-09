@@ -7,13 +7,13 @@ export default function Project(props) {
         <div className="projectContainer">
             <h2>{title}</h2>
             <h3>{description}</h3>
-            {links.map(({ url, text }) => (
+            {links.map(({ url, text },i) => (
                 <a
                     className="link"
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    key="text"
+                    key={i}
                 >
                     {text}
                 </a>

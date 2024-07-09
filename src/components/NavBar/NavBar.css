@@ -6,8 +6,8 @@ ul {
 }
 li {
     font-size: 5cqw;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     font-weight: 300;

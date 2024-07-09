@@ -5,7 +5,7 @@ export default function Projects() {
         <div>
             <div className="titleContainer">
                 <div className="titleHeader">
-                    <h1 className="name">Projects</h1>
+                    <h1 className="name">PROJECTS</h1>
                 </div>
             </div>
             {projectList.map((project, i) => (

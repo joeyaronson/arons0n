@@ -11,23 +11,14 @@ export default function Carousel(props) {
             autoPlay
             swipeable
             stopOnHover
-            interval={1200}
+            interval={12000}
             swipeScrollTolerance={50}
         >
-            {imgs.map(({ img, desc }) => (
-                <React.Fragment key="desc">
+            {imgs.map(({ img, desc }, i) => (
+                <div key={i}>
                     <img alt={desc} src={img} />
-                </React.Fragment>
+                </div>
             ))}
-
-            {/* <div>
-                <img src="assets/2.jpeg" />
-                <p className="legend">Legend 2</p>
-            </div>
-            <div>
-                <img src="assets/3.jpeg" />
-                <p className="legend">Legend 3</p>
-            </div> */}
         </ResponsiveCarousel>
     );
 }
