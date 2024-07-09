@@ -150,6 +150,14 @@ i {
     font-weight: 700;
 }
 
+.carousel .thumb {
+    border: none !important;
+    transition: all 0.2s ease-in-out;
+}
+.carousel .thumb.selected {
+    transform: scale(1.1);
+}
+
 @media only screen and (max-width: 600px) {
     .name {
         font-size: 26cqw;
