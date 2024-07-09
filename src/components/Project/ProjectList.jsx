@@ -117,7 +117,7 @@ export const projectList = [
             { img: drip, description: " drip" },
             { img: cube, description: " cube" },
             { img: depth, description: "depth" },
-            { img: iris, description: " iris" },
+            { img: iris, description: " iris" }
         ],
     },
     {
