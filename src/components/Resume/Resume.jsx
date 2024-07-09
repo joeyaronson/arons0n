@@ -3,8 +3,10 @@ import React from "react";
 export default function Resume() {
     return (
         <>
-            <div className="nameHeader">
-                <p className="name">RESUME</p>
+            <div className="titleContainer">
+                <div className="titleHeader">
+                    <h1>RESUME</h1>
+                </div>
             </div>
             <div className="resumeContainer">
                 <iframe
